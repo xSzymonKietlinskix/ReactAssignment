@@ -122,5 +122,16 @@
     color: #CCCCCC;
   }
 
+  .episodes{
+    position: relative;
+    left: 1036px;
+    top: 231px;
+    font-family: "Lato-Bold";
+    font-size: 25px;
+    margin: 0px;
+    padding-bottom: 74px;
+    color: #000000;
+  }
+
   .flex { display : flex }
 

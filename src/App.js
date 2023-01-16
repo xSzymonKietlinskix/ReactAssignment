@@ -3,6 +3,8 @@ import Header from './components/header';
 import Title from './components/title';
 import Footer from './components/footer';
 import './components/styles.css'
+import Api from './components/api';
+
 
 function App() {
   return (
@@ -11,6 +13,7 @@ function App() {
         <Title />
         <img className = "logo" src = {logo} />
         <Footer />
+        <Api />
     </div>
   );
 }
