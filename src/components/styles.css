@@ -1,6 +1,11 @@
 @font-face {
-    font-family: Lato-Bold;
-    src: url('./Fonts/Lato-Bold.ttf')  format('truetype');
+    font-family: "Lato-Bold";
+    src: url("./Fonts/Lato-Bold.ttf") format("truetype");
+  }
+
+  @font-face {
+    font-family: "Lato-Regular";
+    src: url("./Fonts/Lato-Regular.ttf")  format("truetype");
   }
   
   .greenRectangle {
@@ -19,14 +24,13 @@
     height: 48px;
     font-size: 35;
     font-family: Lato-bold;
-    font-weight: 700;
+    color: #000000;
     position: absolute;
     left: 65px;
     top: 24px;
     margin: 0;
+    
   }
-
-
 
   .blueRectangle {
     width: 939px;
@@ -54,6 +58,68 @@
     border-top-color: transparent;
     border-bottom-color: #00BDD4;
     margin: 0;
+  }
+
+  .logo {
+    width: 647px;
+    height: 664px;
+    position: absolute;
+    top: 484px;
+    left: 180px;
+  }
+
+  .title{
+    font-size: 60px;
+    color: #000000;
+    margin: 0;
+  }
+
+  h1.title{
+    font-family: "Lato-Regular";
+    font-weight: 400;
+    position: absolute;
+    top: 215px;
+    left: 197px;
+  }
+
+  h2.title{
+    font-family: "Lato-Regular";
+    font-weight: 400;
+    position: absolute;
+    top: 287px;
+    left: 197px;
+  }
+
+  h3.title{
+    font-family: "Lato-Bold";
+    position: absolute;
+    color:#00BDD4;
+    font-weight: 700;
+    top: 371px;
+    left: 197px;
+    font-size: 70px;
+  }
+
+  span.title{
+    font-family: "Lato-bold";
+  }
+
+  .footer{
+    width: 1920px;
+    height: 67.23px;
+    position: absolute;
+    top: 1421.77px;
+    background-color: #464646;
+  }
+
+  .footerText{
+    position: absolute;
+    left: 880px;
+    top: 1446px;
+    font-family: "Lato-Bold";
+    font-size: 16px;
+    margin: 0;
+    color: #CCCCCC;
   }
 
   .flex { display : flex }
