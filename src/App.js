@@ -1,18 +1,33 @@
-import logo from './components/RaMlogo.png';
-import Header from './components/header';
-import Title from './components/title';
-import Footer from './components/footer';
-import './components/styles.css'
+// Import everything needed to use the `useQuery` hook
+import { useQuery, gql } from '@apollo/client';
 
-function App() {
+
+const GET_LOCATIONS = gql`
+  query GetLocations{
+    results {
+      gender
+    }
+  }
+`;
+
+function DisplayLocations() {
+  const {loading, error,data } = useQuery(GET_LOCATIONS);
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>Error : {error.message}</p>;
+
+  return data.info.map(({gender}) => (
+    <div >
+      <p>{gender}</p>
+    </div>
+  ));
+}
+
+export default function episodesList() {
   return (
     <div>
-        <Header />
-        <Title />
-        <img className = "logo" src = {logo} />
-        <Footer />
+      <h2>My first Apollo 🚀</h2>
+      <br/>
+      <DisplayLocations />
     </div>
   );
 }
-
-export default App;
