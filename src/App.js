@@ -8,12 +8,18 @@ import Api from './components/api';
 
 function App() {
   return (
-    <div>
+    <div className='page'>
         <Header />
-        <Title />
-        <img className = "logo" src = {logo} />
+        <div className='body'>
+          <div className='Test'>
+            <Title />
+            <img className = "logo" src = {logo} />
+
+          </div>
+          <Api />
+          <div className="line" />
+        </div>
         <Footer />
-        <Api />
     </div>
   );
 }
