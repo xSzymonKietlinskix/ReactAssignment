@@ -6,13 +6,16 @@ class Title extends Component {
   state = {};
   render() {
     return (
-      <div>
-        <h1 className="title">
-          Episodes of the <span className="title">4th</span>{" "}
-        </h1>
-        <h2 className="title">season of the series</h2>
-        <h3 className="title">Rick and Morty</h3>
-      </div>
+      <h1 className="head">
+        <p className="titleFont">
+          Episodes of the{" "}
+          <span className="titleFont" style={{ fontFamily: "Lato-bold" }}>
+            4th
+          </span>
+        </p>
+        <p className="titleFont">season of the series</p>
+        <p className="titleRnM">Rick and Morty</p>
+      </h1>
     );
   }
 }

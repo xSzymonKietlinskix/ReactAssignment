@@ -9,14 +9,11 @@
   }
   
   .greenRectangle {
-    width: 1920px;
+    width: 981px;
     height: 95px;
     background-color: #DAED49;
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    margin: 0;
-    padding: 0;
+    margin-bottom: 60px;
+    
   }
   
   .textHeader {
@@ -25,29 +22,22 @@
     font-size: 35;
     font-family: Lato-bold;
     color: #000000;
-    position: absolute;
-    left: 65px;
-    top: 24px;
-    margin: 0;
-    
+    margin-top: 25px;
+    margin-left: 126px;
+    letter-spacing: 1.5px;
   }
 
   .blueRectangle {
     width: 939px;
     height: 95px;
     background-Color: #00BDD4;
-    position: absolute;
-    left: 981px;
-    top: 0px;
+    display: flex;
     margin: 0;
   }
 
   .blueTriangle {
     width: 0px;
     height: 0px;
-    position: absolute;
-    left: 926px;
-    top: 0px;
     background-Color: transparent;
     border-Style: solid;
     border-right-width: 0px;
@@ -57,51 +47,53 @@
     border-left-color: transparent;
     border-top-color: transparent;
     border-bottom-color: #00BDD4;
-    margin: 0;
+    margin-left: -55px;
   }
 
   .logo {
     width: 647px;
     height: 664px;
-    position: absolute;
-    top: 484px;
-    left: 180px;
+    margin-left: 180px;
+    margin-top: 19.5px;
+    margin-bottom: 273.8px;
+    margin-right: 209px;
   }
 
-  .title{
+  .titleFont{
+    letter-spacing: 0.5px;
     font-size: 60px;
     color: #000000;
+    font-family: "Lato-Regular";
+    font-weight: 400;
     margin: 0;
   }
 
-  h1.title{
-    font-family: "Lato-Regular";
-    font-weight: 400;
-    position: absolute;
-    top: 215px;
-    left: 197px;
-  }
-
-  h2.title{
-    font-family: "Lato-Regular";
-    font-weight: 400;
-    position: absolute;
-    top: 287px;
-    left: 197px;
-  }
-
-  h3.title{
+  .titleRnM{
+    
     font-family: "Lato-Bold";
-    position: absolute;
     color:#00BDD4;
     font-weight: 700;
-    top: 371px;
-    left: 197px;
     font-size: 70px;
+    margin: 0px;
   }
 
-  span.title{
-    font-family: "Lato-bold";
+  .head{
+    width: 683px;
+    height: 230px;
+    margin-top: 60px;
+    margin-left: 197px;
+    margin-bottom: 19.5px;
+    margin-right: 78px;
+  }
+
+  .episodes{
+    font-family: "Lato-Bold";
+    font-size: 25px;
+    color: #000000;
+    list-style-type: none;
+    padding-bottom: 68px;
+    margin-top: 10px;
+    margin-right: 14.75px;
   }
 
   .footer{
@@ -122,16 +114,73 @@
     color: #CCCCCC;
   }
 
-  .episodes{
-    position: relative;
-    left: 1036px;
-    top: 231px;
-    font-family: "Lato-Bold";
-    font-size: 25px;
+
+  .header{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 0px;
     margin: 0px;
-    padding-bottom: 74px;
-    color: #000000;
   }
 
-  .flex { display : flex }
+  .line{
+    width: 1px;
+    height: 1060px;
+    background-color: #D1D1D1;
+    margin-left: 14.75px;
+    margin-top: 119.5px;
+  }
+
+  .api{
+    display: flex;
+    flex-direction: row;
+  }
+
+  .body{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .page{
+    width: auto;
+  }
+  
+  .test{
+    display: text;
+    flex-direction: column;
+  }
+
+
+  @media screen and (max-width: 412px) {
+    .greenRectangle{
+      background-color: red;
+    }
+    .header{
+      margin: 0;
+    }
+    .head{
+      margin: 0px;
+      margin-left: 30px;
+    }
+  
+    .body{
+      margin-top: -650px;
+      margin-left: -90px;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      transform: scale(60%);
+    }
+    .logo{
+      width: fit-content;
+      height: fit-content;
+      padding: 0px;
+      margin: 0;
+    }
+  }
 

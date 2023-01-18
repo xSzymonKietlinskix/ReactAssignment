@@ -6,12 +6,14 @@ class Header extends Component {
   state = {};
   render() {
     return (
-      <header>
-        <object className="greenRectangle" />
-        <h1 className="textHeader">LOREM</h1>
-        <object className="blueRectangle" />
-        <object className="blueTriangle" />
-      </header>
+      <div className="header">
+        <div className="greenRectangle">
+          <h1 className="textHeader">LOREM</h1>
+        </div>
+        <div />
+        <div className="blueTriangle" />
+        <div className="blueRectangle" />
+      </div>
     );
   }
 }
