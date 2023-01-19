@@ -16,57 +16,38 @@ function isO(i) {
   return myStyle;
 }
 
-function DisplayNames() {
-  const { loading, error, data } = useQuery(getEpisodes);
+function DisplayEpisodes(data) {
+  return data.episodesByIds.map(({ episode }) => (
+    <li className="episodes">{episode}</li>
+  ));
+}
 
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error : {error.message}</p>;
-  var isOdd = true;
-  var myStyle;
+function DisplayNameAndDate(data) {
   var i = 0;
-
-  return data.episodesByIds.map(({ episode, air_date, name }) => (
+  return data.episodesByIds.map(({ air_date, name }) => (
     <div>
       <div style={{ display: "none" }}>{i++}</div>
-      <div>
-        <li className={isO(i)}>{name}</li>
-        {console.log(isO(i))}
-      </div>
-      <div className="date">
-        <p>{air_date}</p>
-      </div>
+      <li className={isO(i)}>{name}</li>
+      <p className="date">{air_date}</p>
     </div>
   ));
 }
 
-function DisplayEpisodes() {
+function GetData() {
   const { loading, error, data } = useQuery(getEpisodes);
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error : {error.message}</p>;
-  var isOdd = true;
-  var myStyle;
-  var i = 0;
 
-  return data.episodesByIds.map(({ episode, air_date, name }) => (
-    <div>
-      <div>
-        <li className="episodes">{episode}</li>
-      </div>
+  return (
+    <div className="apiContainer" style={{ marginTop: 77 }}>
+      <div className="columns">{DisplayEpisodes(data)}</div>
+      <div className="line" />
+      <div className="columns">{DisplayNameAndDate(data)}</div>
     </div>
-  ));
+  );
 }
 
 export default function Api() {
-  return (
-    <div className="apiContainer" style={{ marginTop: 77 }}>
-      <div className="columns">
-        <DisplayEpisodes />
-      </div>
-      <div className="line" />
-      <div className="columns">
-        <DisplayNames />
-      </div>
-    </div>
-  );
+  return <GetData />;
 }

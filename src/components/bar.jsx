@@ -10,7 +10,6 @@ class Bar extends Component {
         <div className="greenRectangle">
           <h1 className="textBar">LOREM</h1>
         </div>
-        <div />
         <div className="blueTriangle" />
         <div className="blueRectangle" />
       </div>

@@ -6,10 +6,10 @@ class Footer extends Component {
   state = {};
   render() {
     return (
-      <div>
+      <footer>
         <object className="footer" />
         <h1 className="footerText"> LOREM IPSUM ©2021</h1>
-      </div>
+      </footer>
     );
   }
 }
