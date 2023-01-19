@@ -91,9 +91,9 @@
     font-size: 25px;
     color: #000000;
     list-style-type: none;
-    padding-bottom: 68px;
-    margin-top: 10px;
-    margin-right: 14.75px;
+    margin-bottom: 76px;
+    margin-right: 34.5px;
+   
   }
 
   .footer{
@@ -131,7 +131,7 @@
     width: 1px;
     height: 1060px;
     background-color: #D1D1D1;
-    margin-left: 14.75px;
+    margin-left: 0px;
     margin-top: 119.5px;
   }
 
@@ -151,12 +151,84 @@
   }
   
   .test{
-    display: text;
+    display: flex;
     flex-direction: column;
   }
 
+  .nameBlue{
+    font-family: "Lato-Bold";
+    font-size: 25px;
+    color: #00BDD4;
+    list-style-type: none;
+    margin-right: 14.75px;
+    margin-left: 29px;
+    margin-bottom: 0px;
+  }
 
-  @media screen and (max-width: 412px) {
+  
+  .nameGreen{
+    font-family: "Lato-Bold";
+    font-size: 25px;
+    color: #BDD800;
+    list-style-type: none;
+    margin-right: 14.75px;
+    margin-left: 29px;
+  }
+  
+  .date{
+    font-family: "Lato-Bold";
+    font-size: 20px;
+    color: #959595;
+    margin-left: 29px;
+    margin-top: -6px;
+    margin-bottom: 37px;
+  }
+
+
+  @media screen and (min-width: 2000px) {
+    .greenRectangle{
+      flex-grow: 1;
+    }
+    .blueRectangle{
+      flex-grow: 1;
+    }
+    .head{
+      width: auto;
+    }
+    .body{
+      margin: auto;
+      justify-content: space-around;
+    }
+  }
+
+  @media screen and (max-width: 1800px) {
+    .greenRectangle{
+      flex-grow: 1;
+    }
+    .blueRectangle{
+      flex-grow: 1;
+    }
+    .head{
+      width: auto;
+    }
+    .body{
+      margin: auto;
+      justify-content: space-around;
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+  @media screen and (max-width: 500px) {
     .greenRectangle{
       background-color: red;
     }
