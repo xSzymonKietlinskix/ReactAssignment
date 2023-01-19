@@ -59,12 +59,12 @@ function DisplayEpisodes() {
 
 export default function Api() {
   return (
-    <div className="api" style={{ marginTop: 77 }}>
-      <div className="test">
+    <div className="apiContainer" style={{ marginTop: 77 }}>
+      <div className="columns">
         <DisplayEpisodes />
       </div>
       <div className="line" />
-      <div className="test">
+      <div className="columns">
         <DisplayNames />
       </div>
     </div>

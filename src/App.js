@@ -1,6 +1,6 @@
 import logo from './components/RaMlogo.png';
+import Bar from './components/bar';
 import Header from './components/header';
-import Title from './components/title';
 import Footer from './components/footer';
 import './components/styles.css'
 import Api from './components/api';
@@ -9,10 +9,10 @@ import Api from './components/api';
 function App() {
   return (
     <div className='page'>
-        <Header />
+        <Bar />
         <div className='body'>
           <div className='Test'>
-            <Title />
+            <Header />
             <img className = "logo" src = {logo} />
 
           </div>
