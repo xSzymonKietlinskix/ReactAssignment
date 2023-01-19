@@ -3,17 +3,18 @@ import React, { Component } from "react";
 import "./styles.css";
 
 class Header extends Component {
-  state = {};
   render() {
     return (
-      <div className="header">
-        <div className="greenRectangle">
-          <h1 className="textHeader">LOREM</h1>
-        </div>
-        <div />
-        <div className="blueTriangle" />
-        <div className="blueRectangle" />
-      </div>
+      <h1 className="headerContainer">
+        <p className="headerFont">
+          Episodes of the{" "}
+          <span className="headerFont" style={{ fontFamily: "Lato-bold" }}>
+            4th
+          </span>
+        </p>
+        <p className="headerFont">season of the series</p>
+        <p className="headerRnM">Rick and Morty</p>
+      </h1>
     );
   }
 }
