@@ -10,18 +10,16 @@ function App() {
   return (
     <div className='page'>
         <Bar />
-        <div className='body'>
-          <div className='Test'>
+        <body className='body'>
+          <div className='columns'>
             <Header />
             <img className = "logo" src = {logo} />
-
           </div>
           <div className="api">
-          <Api />
-
+        
           </div>
-         
-        </div>
+        </body>
+      
     </div>
   );
 }
