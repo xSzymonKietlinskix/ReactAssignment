@@ -162,20 +162,19 @@
   .footer{
     width: 1920px;
     height: 67.23px;
-    position: absolute;
-    top: 1421.77px;
+    margin-top: 0px;
     background-color: #464646;
   }
 
   .footerText{
-    position: absolute;
-    left: 880px;
-    top: 1446px;
+    position: relative;
     font-family: "Lato-Bold";
     font-size: 16px;
-    margin: 0;
+    text-align: center;
+    margin: -46px;
     color: #CCCCCC;
   }
+
 
   /* --- containers --- */
 
@@ -195,7 +194,7 @@
   }
 
 
-  /* --- media ---
+  /* --- media --- */
 
   @media screen and (min-width: 2000px) {
     .greenRectangle{
@@ -204,12 +203,18 @@
     .blueRectangle{
       flex-grow: 1;
     }
-    .head{
+    .barContainer{
       width: auto;
     }
     .body{
       margin: auto;
-      justify-content: space-around;
+      justify-content: space-evenly;
+    }
+    .footer{
+      width: 100%;
+    }
+    .page{
+      width: 100%;
     }
   }
 
@@ -220,41 +225,69 @@
     .blueRectangle{
       flex-grow: 1;
     }
-    .head{
+    .barContainer{
       width: auto;
     }
     .body{
       margin: auto;
-      justify-content: space-around;
+      justify-content: space-evenly;
+    }
+    .footer{
+      width: 100%;
+    }
+    .page{
+      width: 100%;
     }
   }
 
   @media screen and (max-width: 500px) {
     .greenRectangle{
-      background-color: red;
+      margin: auto;
+      margin-right: 0px;
+      width:100vh;
+      height: 71px;
     }
-    .header{
-      margin: 0;
+    .blueRectangle{
+      display: none;
     }
-    .head{
-      margin: 0px;
-      margin-left: 30px;
+    .blueTriangle{
+      display: none;
     }
-  
-    .body{
-      margin-top: -650px;
-      margin-left: -90px;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      transform: scale(60%);
+    .textBar{
+      text-align: center;
+    }
+    .barContainer{
+      width:100vh;
+    }
+    .headerFont{
+      font-size: 35px;
+    }
+    .headerRnM{
+      font-size: 40px;
     }
     .logo{
-      width: fit-content;
-      height: fit-content;
+      width: 351px;
+      height: 360px;
+    }
+    :root{
+      width: 100vh;
+    }
+    .body{
+      margin: auto;
+      justify-content: center;
+    }
+    .footer{
+      width: 100%;
+    }
+    .page{
+      width: 100vh;
       padding: 0px;
-      margin: 0;
+      justify-content: center;
     }
   }
 
-  */
+
+
+
+
+

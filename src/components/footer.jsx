@@ -8,7 +8,7 @@ class Footer extends Component {
     return (
       <footer>
         <object className="footer" />
-        <h1 className="footerText"> LOREM IPSUM ©2021</h1>
+        <div className="footerText"> LOREM IPSUM ©2021</div>
       </footer>
     );
   }
