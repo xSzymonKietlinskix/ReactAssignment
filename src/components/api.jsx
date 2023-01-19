@@ -1,4 +1,3 @@
-// Import everything needed to use the `useQuery` hook
 import { useQuery, gql } from "@apollo/client";
 import "./styles.css";
 
@@ -12,10 +11,31 @@ const getEpisodes = gql`
   }
 `;
 
+function isO(i) {
+  var myStyle = i % 2 === 0 ? "nameGreen" : "nameBlue";
+  return myStyle;
+}
+
 function DisplayNames() {
   const { loading, error, data } = useQuery(getEpisodes);
+
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>Error : {error.message}</p>;
+  var isOdd = true;
+  var myStyle;
+  var i = 0;
+
   return data.episodesByIds.map(({ episode, air_date, name }) => (
-    <li>{name}</li>
+    <div>
+      <div style={{ display: "none" }}>{i++}</div>
+      <div>
+        <li className={isO(i)}>{name}</li>
+        {console.log(isO(i))}
+      </div>
+      <div className="date">
+        <p>{air_date}</p>
+      </div>
+    </div>
   ));
 }
 
@@ -24,18 +44,29 @@ function DisplayEpisodes() {
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error : {error.message}</p>;
+  var isOdd = true;
+  var myStyle;
+  var i = 0;
 
   return data.episodesByIds.map(({ episode, air_date, name }) => (
     <div>
-      <li className="episodes">{episode}</li>
+      <div>
+        <li className="episodes">{episode}</li>
+      </div>
     </div>
   ));
 }
 
 export default function Api() {
   return (
-    <div style ={{marginTop: 68}}>
-      <DisplayEpisodes />
+    <div className="api" style={{ marginTop: 77 }}>
+      <div className="test">
+        <DisplayEpisodes />
+      </div>
+      <div className="line" />
+      <div className="test">
+        <DisplayNames />
+      </div>
     </div>
   );
 }
