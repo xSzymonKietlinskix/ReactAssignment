@@ -16,10 +16,12 @@ function App() {
             <img className = "logo" src = {logo} />
           </div>
           <div className="api">
-        
+            <Api />
           </div>
         </body>
-      
+        <div className='footer'>
+        <Footer />
+        </div>
     </div>
   );
 }
