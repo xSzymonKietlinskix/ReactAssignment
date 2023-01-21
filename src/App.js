@@ -12,7 +12,7 @@ function App() {
         <Bar />
         <body className='body'>
           <div className='columns'>
-            <Header />
+          <Header />
             <img className = "logo" src = {logo} />
           </div>
           <div className="api">
