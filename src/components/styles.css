@@ -34,6 +34,7 @@
     background-Color: #00BDD4;
     display: flex;
     margin: 0;
+    margin-bottom: 136px;
   }
 
   .blueTriangle {
@@ -97,7 +98,7 @@
   .headerContainer{
     width: 683px;
     height: 230px;
-    margin-top: 60px;
+    margin-top: -17px;
     margin-left: 197px;
     margin-bottom: 19.5px;
     margin-right: 78px;
@@ -135,7 +136,7 @@
     margin-top: -0.3px;
     vertical-align: baseline;
   }
-
+  
   .nameGreen{
     width: 500px;
     height: 30px;
@@ -174,6 +175,7 @@
     width: 1920px;
     height: 67.23px;
     background-color: #464646;
+    margin-top: 1px;
   }
 
   .footerText{
@@ -189,12 +191,14 @@
   .body{
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
   }
 
   .page{
     width: 1920px;
     height: 1489px;
+    padding: 0px;
+    margin: 0px;
   }
   
   .columns{
@@ -225,77 +229,98 @@
     .page{
       width: 100%;
     }
-  }
+  }*/
 
-  @media screen and (max-width: 1800px) {
-    .greenRectangle{
-      flex-grow: 1;
-    }
-    .blueRectangle{
-      flex-grow: 1;
-    }
-    .barContainer{
-      width: auto;
-    }
-    .body{
-      margin: auto;
-      justify-content: space-evenly;
-    }
-    .footer{
-      width: 100%;
-    }
-    .page{
-      width: 100%;
-    }
-  }
-
-  */
-
-  @media screen and (max-width: 500px) {
-    .greenRectangle{
-      margin: auto;
-      margin-right: 0px;
-      width:100vh;
-      height: 71px;
-    }
-    .blueRectangle{
-      display: none;
-    }
-    .blueTriangle{
-      display: none;
-    }
-    .textBar{
-      text-align: center;
-    }
-    .barContainer{
-      width:100vh;
-    }
-    .headerFont{
-      font-size: 35px;
-    }
-    .headerRnM{
-      font-size: 40px;
-    }
-    .logo{
-      width: 351px;
-      height: 360px;
-    }
-    :root{
-      width: 100vh;
-    }
-    .body{
-      margin: auto;
-      justify-content: center;
-    }
-    .footer{
-      width: 100%;
-    }
-    .page{
-      width: 100vh;
-      padding: 0px;
-      justify-content: center;
-    }
-  }
+  @media screen and (max-width: 412px) {
+   .page{
+    width: 412px;
+    height: 2063px;
+    overflow-x: hidden;
+   }
+   .greenRectangle{
+    width: 412px;
+    height: 71px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+   }
+   .blueRectangle{
+    display: none;
+    margin-right: 0px;
+   }
+   .blueTriangle{
+    display: none;
+    margin-right: 0px;
+   }
+   .textBar{
+    font-size: 30px;
+    margin-top: 18px;
+    margin-left: 21.2%;
+    margin-right: 0px;
+   }
+   .headerFont{
+    font-size: 35px;
+    margin-right: 0px;
+   }
+   .headerRnM{
+    font-size: 40px;
+    margin-right: 0px;
+   }
+   .headerContainer{
+    width: 336px;
+    height: 142px;
+    margin: 41px 0px 31px 28px;
+   }
+   .logo{
+    width: 351px;
+    height: 360px; 
+    margin: 0px 0px 58px 25px ;
+   }
+   .body{
+    flex-direction: column;
+    margin-right: 0px;
+    width: 412px;
+   }
+   .episodes{
+    width: 91px;
+    height: 32px;
+    font-size: 18px;
+    margin: 0px 0px 3px 25px;
+   }
+   .nameBlue{
+    max-width: 412px;
+    font-size: 18px;
+    margin: 0px 0px 5.1px 25px;
+   }
+   .nameGreen{
+    max-width: 412px;
+    font-size: 18px;
+    margin: 0px 0px 5.1px 25px;
+   }
+   .date{
+    max-width: 412px;
+    font-size: 15px;
+    margin: 5px 0px 0px 25px;
+   }
+   .line{
+    width: 362px;
+    height: 0.1px;
+    margin: 16.5px 0px 17.5px 25px;
+   }
+   .footer{
+    height: 48.72px;
+    width: 412px;
+    margin-top: 64px;
+    
+   }
+   .footerText{
+    font-size: 14px;
+    padding-top: 16.7px;
+    margin-left: -19px;
+    word-spacing: 1.4px;
+    letter-spacing: -0.1px;
+   }
+   
+   }
 
 
 

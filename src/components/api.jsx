@@ -1,4 +1,5 @@
 import { useQuery, gql } from "@apollo/client";
+import { useState, useEffect } from "react";
 import "./styles.css";
 
 const getEpisodes = gql`
@@ -33,14 +34,46 @@ function DisplayNameAndDate(data) {
   ));
 }
 
+function DisplayLine(i) {
+  if (i <= 9) return <div className="line" />;
+}
+
+function DisplayForMobiles(data) {
+  var i = 0;
+  return data.episodesByIds.map(({ episode, air_date, name }) => (
+    <div>
+      <li className="episodes">{episode}</li>
+      <div style={{ display: "none" }}>{i++}</div>
+      <li className={isO(i)}>{name}</li>
+      <p className="date">{air_date}</p>
+      {DisplayLine(i)}
+    </div>
+  ));
+}
+
 function GetData() {
   const { loading, error, data } = useQuery(getEpisodes);
+
+  const [windowSize, setWindowSize] = useState(window.innerWidth);
+  useEffect(() => {
+    const handleWindowResize = () => {
+      setWindowSize([window.innerWidth]);
+    };
+
+    window.addEventListener("resize", handleWindowResize);
+
+    return () => {
+      window.removeEventListener("resize", handleWindowResize);
+    };
+  });
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error : {error.message}</p>;
 
+  if (windowSize <= 719) return <div>{DisplayForMobiles(data)}</div>;
+
   return (
-    <div className="apiContainer" style={{ marginTop: 77 }}>
+    <div className="apiContainer">
       <div className="columns">{DisplayEpisodes(data)}</div>
       <div className="line" />
       <div className="columns">{DisplayNameAndDate(data)}</div>
