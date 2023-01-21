@@ -15,18 +15,17 @@
     height: 95px;
     background-color: #DAED49;
     margin-bottom: 60px;
-    
   }
   
   .textBar {
     width: 238px;
     height: 48px;
-    font-size: 35;
+    font-size: 35px;
     font-family: Lato-bold;
     color: #000000;
-    margin-top: 25px;
-    margin-left: 126px;
-    letter-spacing: 1.5px;
+    margin: 24px 0px 0px 65px ;
+    text-align: center;
+    vertical-align: baseline;
   }
 
   .blueRectangle {
@@ -69,16 +68,14 @@
   .logo {
     width: 647px;
     height: 664px;
-    margin-left: 180px;
-    margin-top: 19.5px;
-    margin-bottom: 273.8px;
-    margin-right: 209px;
+    margin: 19.5px 209px 273.8px 180px;
   }
 
   /*--- Header ---*/
 
   .headerFont{
-    letter-spacing: 0.5px;
+    letter-spacing: 0.1px;
+    word-spacing: 2.7px;
     font-size: 60px;
     color: #000000;
     font-family: "Lato-Regular";
@@ -93,6 +90,8 @@
     font-weight: 700;
     font-size: 70px;
     margin: 0px;
+    letter-spacing: -0.3px;
+    word-spacing: 2px;
   }
 
   .headerContainer{
@@ -113,43 +112,55 @@
     list-style-type: none;
     margin-bottom: 76px;
     margin-right: 34.5px;
-   
+    margin-left: 0.6px;
   }
 
   .line{
     width: 1px;
     height: 1060px;
     background-color: #D1D1D1;
-    margin-left: 0px;
-    margin-top: -20px;
+    margin-left: -1px;
+    margin-top: -18px;
   }
 
   .nameBlue{
+    height: 30px;
     font-family: "Lato-Bold";
     font-size: 25px;
     color: #00BDD4;
     list-style-type: none;
     margin-right: 14.75px;
     margin-left: 29px;
-    margin-bottom: 0px;
+    margin-bottom: 15px;
+    margin-top: -0.3px;
+    vertical-align: baseline;
   }
 
   .nameGreen{
+    width: 500px;
+    height: 30px;
     font-family: "Lato-Bold";
     font-size: 25px;
     color: #BDD800;
     list-style-type: none;
     margin-right: 14.75px;
     margin-left: 29px;
+    margin-bottom: 15px;
+    margin-top: 0px;
+    text-align: left;
+    vertical-align: baseline;
+
   }
   
   .date{
+    height: 24px;
     font-family: "Lato-Bold";
     font-size: 20px;
     color: #959595;
     margin-left: 29px;
-    margin-top: -6px;
+    margin-top: 0px;
     margin-bottom: 37px;
+    vertical-align: baseline;
   }
 
   .apiContainer{
@@ -162,19 +173,16 @@
   .footer{
     width: 1920px;
     height: 67.23px;
-    margin-top: 0px;
     background-color: #464646;
   }
 
   .footerText{
-    position: relative;
     font-family: "Lato-Bold";
     font-size: 16px;
     text-align: center;
-    margin: -46px;
+    padding-top: 24.2px;
     color: #CCCCCC;
   }
-
 
   /* --- containers --- */
 
@@ -185,7 +193,8 @@
   }
 
   .page{
-    width: auto;
+    width: 1920px;
+    height: 1489px;
   }
   
   .columns{
@@ -194,7 +203,7 @@
   }
 
 
-  /* --- media --- */
+  /* --- media --- 
 
   @media screen and (min-width: 2000px) {
     .greenRectangle{
@@ -239,6 +248,8 @@
       width: 100%;
     }
   }
+
+  */
 
   @media screen and (max-width: 500px) {
     .greenRectangle{
