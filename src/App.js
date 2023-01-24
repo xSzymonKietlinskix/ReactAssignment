@@ -10,18 +10,18 @@ function App() {
   return (
     <div className='page'>
         <Bar />
-        <body className='body'>
-          <div className='columns'>
-          <Header />
+        <main className='body'>
+          <header className='columns'>
+            <Header />
             <img className = "logo" src = {logo} />
-          </div>
-          <div className="api">
+          </header>
+          <article className="api">
             <Api />
-          </div>
-        </body>
-        <div className='footer'>
+          </article>
+        </main>
+        <footer className='footer'>
         <Footer />
-        </div>
+        </footer>
     </div>
   );
 }
