@@ -12,23 +12,23 @@ const getEpisodes = gql`
   }
 `;
 
-function isO(i) {
+function isOdd(i) {
   var myStyle = i % 2 === 0 ? "nameGreen" : "nameBlue";
   return myStyle;
 }
 
 function DisplayEpisodes(data) {
   return data.episodesByIds.map(({ episode }) => (
-    <li className="episodes">{episode}</li>
+    <li key = {episode} className="episodes">{episode}</li>
   ));
 }
 
 function DisplayNameAndDate(data) {
   var i = 0;
   return data.episodesByIds.map(({ air_date, name }) => (
-    <div>
+    <div key = {name}>
       <div style={{ display: "none" }}>{i++}</div>
-      <li className={isO(i)}>{name}</li>
+      <li className={isOdd(i)}>{name}</li>
       <p className="date">{air_date}</p>
     </div>
   ));
@@ -41,13 +41,13 @@ function DisplayLine(i) {
 function DisplayForMobiles(data) {
   var i = 0;
   return data.episodesByIds.map(({ episode, air_date, name }) => (
-    <div>
+    <article key = {episode}>
       <li className="episodes">{episode}</li>
       <div style={{ display: "none" }}>{i++}</div>
-      <li className={isO(i)}>{name}</li>
+      <li className={isOdd(i)}>{name}</li>
       <p className="date">{air_date}</p>
       {DisplayLine(i)}
-    </div>
+    </article>
   ));
 }
 
@@ -55,6 +55,7 @@ function GetData() {
   const { loading, error, data } = useQuery(getEpisodes);
 
   const [windowSize, setWindowSize] = useState(window.innerWidth);
+
   useEffect(() => {
     const handleWindowResize = () => {
       setWindowSize([window.innerWidth]);
@@ -73,11 +74,11 @@ function GetData() {
   if (windowSize <= 719) return <div>{DisplayForMobiles(data)}</div>;
 
   return (
-    <div className="apiContainer">
+    <article className="apiContainer">
       <div className="columns">{DisplayEpisodes(data)}</div>
       <div className="line" />
       <div className="columns">{DisplayNameAndDate(data)}</div>
-    </div>
+    </article>
   );
 }
 
