@@ -206,103 +206,11 @@
   }
 
 
-  /*mobile version*/
-
-  @media screen and (max-width: 612px) {
-   .page{
-    width: 412px;
-    height: 2063px;
-    overflow-x: hidden;
-   }
-   .greenRectangle{
-    width: 412px;
-    height: 71px;
-    margin-right: 0px;
-    margin-bottom: 0px;
-   }
-   .blueRectangle{
-    display: none;
-    margin-right: 0px;
-   }
-   .blueTriangle{
-    display: none;
-    margin-right: 0px;
-   }
-   .textBar{
-    font-size: 30px;
-    margin-top: 18px;
-    margin-right: 0px;
-    margin-left: 21.2%;
-   }
-   .headerFont{
-    font-size: 35px;
-    margin-right: 0px;
-   }
-   .headerRnM{
-    font-size: 40px;
-    margin-right: 0px;
-   }
-   .headerContainer{
-    width: 336px;
-    height: 142px;
-    margin: 41px 0px 31px 28px;
-   }
-   .logo{
-    width: 351px;
-    height: 360px; 
-    margin: 0px 0px 58px 25px ;
-   }
-   .body{
-    flex-direction: column;
-    margin-right: 0px;
-    width: 412px;
-   }
-   .episodes{
-    width: 91px;
-    height: 32px;
-    font-size: 18px;
-    margin: 0px 0px 3px 25px;
-   }
-   .nameBlue{
-    max-width: 412px;
-    font-size: 18px;
-    margin: 0px 0px 5.1px 25px;
-   }
-   .nameGreen{
-    max-width: 412px;
-    font-size: 18px;
-    margin: 0px 0px 5.1px 25px;
-   }
-   .date{
-    max-width: 412px;
-    font-size: 15px;
-    margin: 5px 0px 0px 25px;
-   }
-   .line{
-    width: 362px;
-    height: 0.1px;
-    margin: 16.5px 0px 17.5px 25px;
-   }
-   .footer{
-    height: 48.72px;
-    width: 412px;
-    margin-top: 64px;
-    
-   }
-   .footerText{
-    font-size: 14px;
-    padding-top: 16.7px;
-    margin-left: -19px;
-    word-spacing: 1.4px;
-    letter-spacing: -0.1px;
-   }
-   
-   }
-
+  
    
   /* --- media --- NO LONGER PIXEL PERFECT*/
 
-  @media screen and (min-width: 1930px) {
+  @media screen and (min-width: 1921px) {
     .greenRectangle{
       flex-grow: 1;
     }
@@ -323,6 +231,198 @@
       width: 100%;
     }
   }
+
+  @media screen and (max-width: 1919px) {
+    .greenRectangle{
+      flex-grow: 1;
+    }
+    .blueRectangle{
+      flex-grow: 1;
+    }
+    .barContainer{
+      width: auto;
+    }
+    .body{
+      justify-content: center;
+    }
+    .logo{
+      margin-left: 20%;
+      margin-right: 300px;
+    }
+    .headerContainer{
+      margin-left: 20%;
+    }
+    .footer{
+      width: 100%;
+    }
+    .page{
+      width: 100%;
+    }
+  }
+
+  @media screen and (max-width: 1610px) {
+    .logo{
+      margin-left: 10%;
+      margin-right: 200px;
+    }
+    .headerContainer{
+      margin-left: 10%;
+    }
+  }
+
+  @media screen and (max-width: 1510px) {
+    .logo{
+      margin-left: 5%;
+      margin-right: 0px;
+    }
+    .headerContainer{
+      margin-left: 5%;
+      margin-right: 0px;
+    }
+    .body{
+      margin-right: 0px;
+    }
+    .apiContainer{
+      margin-right: 0px;
+      margin-left: 10px;
+    }
+  }
+
+  @media screen and (max-width: 1350px) {
+    .logo{
+      margin-left: 5%;
+      margin-right: 100px;
+      margin-bottom: 100px;
+    }
+    .headerContainer{
+      margin-left: 5%;
+    }
+    .apiContainer{
+      margin-bottom: 100px;
+    }
+    .body{
+      flex-wrap: wrap;
+    }
+  }
+
+  @media screen and (max-width: 720px) {
+    .page{
+     width: 100%;
+     height: 100%;
+     overflow-x: hidden;
+    }
+    .greenRectangle{
+     width: 100%;
+     height: 71px;
+     margin-right: 0px;
+     margin-bottom: 0px;
+    }
+    .blueRectangle{
+     display: none;
+     margin-right: 0px;
+    }
+    .blueTriangle{
+     display: none;
+     margin-right: 0px;
+    }
+    .textBar{
+     font-size: 30px;
+     margin-top: 18px;
+     margin-right: 0px;
+     margin-left: 30%;
+    }
+    .headerFont{
+     font-size: 35px;
+     margin-right: 0px;
+    }
+    .headerRnM{
+     font-size: 40px;
+     margin-right: 0px;
+    }
+    .headerContainer{
+     width: 336px;
+     height: 142px;
+     margin: 41px 0px 31px 28px;
+    }
+    .logo{
+     width: 351px;
+     height: 360px; 
+     margin: 0px 0px 58px 25px ;
+    }
+    .body{
+     flex-direction: column;
+     justify-content: center;
+     margin: auto;
+     width: 412px;
+    }
+    .episodes{
+     width: 91px;
+     height: 32px;
+     font-size: 18px;
+     margin: 0px 0px 3px 25px;
+    }
+    .nameBlue{
+     max-width: 412px;
+     font-size: 18px;
+     margin: 0px 0px 5.1px 25px;
+    }
+    .nameGreen{
+     max-width: 412px;
+     font-size: 18px;
+     margin: 0px 0px 5.1px 25px;
+    }
+    .date{
+     max-width: 412px;
+     font-size: 15px;
+     margin: 5px 0px 0px 25px;
+    }
+    .line{
+     width: 362px;
+     height: 0.1px;
+     margin: 16.5px 0px 17.5px 25px;
+    }
+    .footer{
+     height: 48.72px;
+     width: 100%;
+     margin-top: 64px;
+     
+    }
+    .footerText{
+     font-size: 14px;
+     padding-top: 16.7px;
+     margin-left: -19px;
+     word-spacing: 1.4px;
+     letter-spacing: -0.1px;
+    }
+    
+    }
+
+    /*mobile version*/
+
+  @media screen and (max-width: 412px) {
+    .page{
+     width: 412px;
+     height: 2063px;
+     overflow-x: hidden;
+    }
+    .greenRectangle{
+     width: 412px;
+    }
+    .textBar{
+      margin-left: 21.2%;
+    }
+    .body{
+     flex-direction: column;
+     margin-right: 0px;
+     width: 412px;
+    }
+    .footer{
+     width: 412px;
+    }
+    
+    }
+ 
+ 
 
 
 
