@@ -234,9 +234,9 @@
     }
   }
 
-  /* for biger than 3500px */
+  /* for biger than 4000px */
 
-  @media screen and (min-width: 3500px) {
+  @media screen and (min-width: 4000px) {
     .body{
       transform: scale(2);
       align-items: center;
